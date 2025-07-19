@@ -1,5 +1,6 @@
 package com.littlesekii;
 
+import com.littlesekii.model.Pokedex;
 import com.littlesekii.model.Pokemon;
 import com.littlesekii.model.pokemon.Pikachu;
 
@@ -14,8 +15,15 @@ public class App
         System.out.println( "Hello World!" );
         System.out.println("===========================");
 
-        Pokemon pokemon = new Pikachu();
+        Pokedex dex = new Pokedex();
+        dex.addPokemon(new Pikachu());
+        dex.addPokemon(new Pokemon("Jolteon"));
 
-        pokemon.cry();
+        for (Pokemon p : dex.getPokemonList()) {
+            System.out.println(p.getName());
+            p.cry();
+        }
+
+
     }
 }
