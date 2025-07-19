@@ -1,7 +1,7 @@
 package com.littlesekii.model;
 
-public class Pokemon {
-    
+public class Pokemon implements IPokemon {
+
     private String name;
 
     public Pokemon(String name) {
@@ -15,4 +15,9 @@ public class Pokemon {
     public void setName(String name) {
         this.name = name;
     }     
+
+    @Override
+    public void cry() {
+        throw new UnsupportedOperationException("Unimplemented method 'cry'");
+    }
 }
